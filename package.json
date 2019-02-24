@@ -1,0 +1,33 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Proyecto de permisos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Graphql",
+    "nodejs"
+  ],
+  "author": "Luis Andrés Fernández",
+  "license": "ISC",
+  "dependencies": {
+    "babel-preset-node5": "^12.0.1",
+    "express": "^4.16.4",
+    "express-graphql": "^0.7.1",
+    "graphiql": "^0.12.0",
+    "graphql": "^14.1.1",
+    "hotnode": "0.0.8",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "sequelize": "^4.42.0",
+    "tedious": "^5.0.3",
+    "typescript": "^3.3.3333"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3",
+    "@babel/preset-react": "^7.0.0"
+  }
+}
