@@ -10,7 +10,7 @@ app.use(cors());
 app.use('/graphql',GraphHTTP({
     schema:Schema,
     pretty:true,
-    graphiql:false
+    graphiql:true
 }));
 app.listen(APP_PORT,()=>{
     console.log('App listenig in the port '+APP_PORT);

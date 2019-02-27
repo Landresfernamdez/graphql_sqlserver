@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('Books', 'sa', '12345', {
+const sequelize = new Sequelize('DBPermisos','sa', '12345', {
   host: 'localhost',
   dialect:'mssql',
   operatorsAliases: false,
@@ -25,68 +25,25 @@ sequelize
   });
 
 
-  const Books = sequelize.define('Libros', {
-    id: {
+  const Institucion= sequelize.define('Institucion',{
+    ID:{
       type: Sequelize.INTEGER,
       primaryKey:true,
       allowNull: false,
       autoIncrement:true
     },
-    titulo: {
+    Nombre: {
+      type: Sequelize.STRING,
+      allowNull: false
+    },
+    Descripcion: {
       type: Sequelize.STRING,
       allowNull: true
-    },
-    autor: {
-      type: Sequelize.STRING,
-      allowNull: true
-    },
-    ano: {
-      type: Sequelize.STRING,
-      allowNull: true
-    },
-    numeroInscripcion: {
-      type: Sequelize.STRING,
-      allowNull: true
-    },
-    numeroClasificacion: {
-      type: Sequelize.STRING,
-      allowNull: true
-    },
-    orden: {
-      type: Sequelize.STRING,
-      allowNull: true
-    },
-    bib: {
-      type: Sequelize.STRING,
-      allowNull: true
-    },
-    precio: {
-      type: Sequelize.STRING,
-      allowNull: true
-    },
-    procedencia: {
-      type: Sequelize.STRING,
-      allowNull: true
-    },
-    observaciones: {
-      type: Sequelize.STRING,
-      allowNull: true
-    },
-    tipo: {
-      type: Sequelize.CHAR,
-      allowNull: false,
-      defaultValue: true,
-      DefaultValue: 'N',
     }
-  },{timestamps:false});
+  },{timestamps:false,tableName:'Institucion'});
 
+Institucion.findAll().then(institucion => {
+  console.log(institucion)
+})
 
-
-
-
-
- /* Books.findAll().then(books => {
-    console.log(books)
-  })*/
-
-  module.exports = sequelize;
+module.exports = sequelize;

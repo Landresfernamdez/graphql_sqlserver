@@ -1,7 +1,7 @@
 "use strict";
 var _graphql = require("graphql");
-var qBooksFiltro=require('./querys/q_books');
+var qInstitucionesFiltro=require('./querys/q_instituciones');
 const Schema = new _graphql.GraphQLSchema({
-  query: qBooksFiltro
+  query: qInstitucionesFiltro
 });
 module.exports = Schema;
